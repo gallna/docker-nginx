@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:latest
 
 # Copy preconfigured locations
 ADD location /etc/nginx/location
