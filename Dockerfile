@@ -4,6 +4,8 @@ WORKDIR /var/www/public
 
 # Copy configuration
 ADD ./nginx.conf /etc/nginx/nginx.conf
+ADD ./conf.d/cache.conf /etc/nginx/conf.d/cache.conf
 ADD ./conf.d/health-check.conf /etc/nginx/conf.d/health-check.conf
 
-EXPOSE 80 81 443
+VOLUME /cache
+EXPOSE 80 81 443 8080
