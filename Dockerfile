@@ -1,4 +1,4 @@
-FROM gallna/nginx.cache:latest
+FROM gallna/nginx:latest
 
 # Copy configuration
 ADD ./default.conf /etc/nginx/conf.d/default.conf
