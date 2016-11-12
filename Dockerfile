@@ -1,4 +1,7 @@
-FROM nginx
+FROM gallna/nginx:latest
 
-# Copy preconfigured locations
-ADD location /etc/nginx/location
+# Copy configuration
+ADD ./conf.d/cache.conf /etc/nginx/conf.d/cache.conf
+
+VOLUME /cache
+EXPOSE 80 81 443 8080
