@@ -1,8 +1,5 @@
-FROM nginx:1.13
-
-# Copy configuration
-COPY nginx.conf mime.types /etc/nginx/
-COPY default.conf health-check.conf /etc/nginx/conf.d/
+FROM nginx:1.12
 
 WORKDIR /var/www/public
 EXPOSE 80 81 443
+COPY nginx /etc/nginx/
